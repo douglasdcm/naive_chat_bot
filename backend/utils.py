@@ -11,12 +11,6 @@ def save_content_to_log(text: str):
     file.write( repr(text) )
     file.close()
 
-def save_content_to_file(text: str, file):
-    file = open(file,'a') 
-    file.write('\n--------------\n')
-    file.write( repr(text) )
-    file.close()
-
 def emergency_message():
 	return random.choice(EMERGENCY_MSG)
 
