@@ -1,6 +1,8 @@
-# Overview (WORK IN PROGRESS)
+# Overview
 
 The intention of this project is to create a chatbot based on movie reviews so that you can ask questions and have a free conversation about this topic.
+
+More details in https://github.com/douglasdcm/chatbot_for_movies
 
 ## Motivation
 
@@ -17,29 +19,6 @@ A graph of similar messages was done to feed the Page Rank algorithm, so the mos
 ### Cossine similarity
 The Cossine similarity is used to match the entry message of the user against the most similar message in the dataset. This value is summed with the Page Rank of the message.
 This processed is done for all messages and the message with the highest value (Page Rank + similarity) is returned to the user.
-
-## How it will be done
-1. Use a dataset with fictional conversations about movies
-2. Process the data to build the sequence of conversations
-3. Apply capitalization, lemmatization and stemming to reduce the variation of words
-4. Enrich the dataset with more features (similarity of sentences)
-5. Train each message with its corresponding answer using a Neural Network
-6. Build a user interface to allow the interaction with the chatbot
-7. Deploy the chatbot in a free and public domain (Heroku)
-
-## The chatbot (draft)
-### Used libraries
-- pandas
-- re
-- keras
-- nump
-- sklearn
-- Scipy
-- train_test_split
-- math
-
-## Prototype
-![alt text](https://i.ibb.co/X2LMpNx/chatbot-ui.png)
 
 ## Installing the chatbot
 
@@ -69,26 +48,6 @@ export DISPLAY=0.0
 cd scr/
 python3 run_ui.py
 ```
-
-## Running the tests and coverage
-
-```bash
-cd src/
-sh coverage.sh
-```
-
-The coverage report is generated in htmlcov/index.html
-
-The current coverage is
-
-
-## Attention
-
-- This chat bot was developed using WSL Ubuntu, so it is not guaranteed to work on different environment.
-- To retrain the chat bot it is necessary use the notebooks following the order of the files 001, 002... and maybe the notebooks will need to be adapeted dependin on your dataset.
-- The notebooks generate the 3 datasets used by the chat bot: movie_lines_pre_processed_for_test.tvs, page_rank_questions.txt and page_rank_answers.txt. If retraining, get the generated files in notebooks/chatdata and put in src/chatdata.
-- This chat bot was developed using 30000 messages due to performance issues, so pay attention to your dataset if you are retrainign the chat bot.
-
 
 ## References
 - Dataset https://www.kaggle.com/Cornell-University/movie-dialog-corpus?select=movie_lines.tsv
