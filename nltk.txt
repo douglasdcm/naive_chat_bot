@@ -1,3 +1,1 @@
-wordnet
-stopwords
-WordNetLemmatizer
+wordnet stopwords WordNetLemmatizer
