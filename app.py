@@ -1,4 +1,9 @@
 #!flask/bin/python
+import os, sys
+from settings import ROOT_DIR
+sys.path.append(ROOT_DIR + '/backend/')
+sys.path.append(ROOT_DIR + '/frontend/')
+
 import sys
 from flask import Flask, render_template, request, redirect, Response
 import random, json
