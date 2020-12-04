@@ -1,0 +1,2 @@
+04/12/2020 01:16:45--------------
+(<class 'KeyboardInterrupt'>, KeyboardInterrupt(), <traceback object at 0x7f652ebe6dc0>)
