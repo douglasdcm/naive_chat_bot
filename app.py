@@ -4,7 +4,6 @@ from settings import ROOT_DIR
 sys.path.append(ROOT_DIR + '/backend/')
 sys.path.append(ROOT_DIR + '/frontend/')
 
-import sys
 from flask import Flask, render_template, request, redirect, Response
 import random, json
 from backend.chatbot import ChatBotInit
@@ -26,4 +25,4 @@ def worker():
 
 if __name__ == '__main__':
 	# run!
-	app.run(threaded=True, port=5000)
+	app.run(host='0.0.0.0', threaded=True, port=5000)
