@@ -3,6 +3,11 @@ import random
 from datetime import datetime
 
 def save_content_to_log(text: str):
+    now = datetime.now()
+    print(now.strftime("%d/%m/%Y %H:%M:%S") + ' --------------\n')
+    print(text)
+
+def save_content_to_log_file(text: str):
     file = open(LOG_FILE,'a') 
 
     now = datetime.now()
