@@ -29,7 +29,7 @@ class Prediction:
 			msg = self.pp.pre_processing_text(msg)
 		except Exception as e:
 			save_content_to_log(e)
-			return BOT_PREFIX + emergency_message()
+			return BOT_PREFIX + emergency_message() + '\n' + e
 
 		if msg == '' or msg is None:
 			return emergency_message()
