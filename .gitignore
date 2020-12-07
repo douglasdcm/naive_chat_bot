@@ -2,6 +2,7 @@ push_prod.sh
 run_cli.py
 run_ui.py
 templates/index_prod.html
+log.txt
 htmlcov
 ptwiki_20180420_100d.txt.bz2
 embedding_wiki_100d_pt.txt
